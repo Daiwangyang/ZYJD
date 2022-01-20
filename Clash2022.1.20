@@ -5,55 +5,43 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: V2-台湾06 大带宽 中继D 2x_39, server: 40.72.176.2, port: 64075, type: vmess, uuid: 55c2178c-bc0c-3d84-9295-8bac798b76b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 40.72.176.2}, udp: true}
-  - {name: V2-台湾06 大带宽 中继D 2x_100, server: 183.232.56.187, port: 64075, type: vmess, uuid: 55c2178c-bc0c-3d84-9295-8bac798b76b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 183.232.56.187}, udp: true}
-  - {name: 欧洲(欢迎订阅Youtube破解资源君), server: 42.193.48.64, port: 50002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: V2-台湾06 大带宽 中继C 2x_38, server: 183.232.56.189, port: 64075, type: vmess, uuid: 55c2178c-bc0c-3d84-9295-8bac798b76b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 183.232.56.189}, udp: true}
-  - {name: V2-台湾06 大带宽 中继B 2x_37, server: 183.232.56.202, port: 64075, type: vmess, uuid: 55c2178c-bc0c-3d84-9295-8bac798b76b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 183.232.56.202}, udp: true}
-  - {name: _US_美国, server: 169.197.143.157, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: _US_美国 2, server: 38.68.135.19, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: _US_美国 3, server: 38.68.134.69, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: Relay_🇪🇪EE-🇯🇵JP_345, server: os1-5.sstr-api.xyz, port: 443, type: trojan, password: MhPG7g9x2Etb4Hspsb, sni: os1-5.sstr-api.xyz, skip-cert-verify: true, udp: true}
+  - {name: Relay_🇳🇱NL-🏁ZZ_653, server: uk1-1.sstr-api.xyz, port: 443, type: trojan, password: MhPG7g9x2Etb4Hspsb, sni: uk1-1.sstr-api.xyz, skip-cert-verify: true, udp: true}
+  - {name: Relay_🇳🇱NL-🏁ZZ_647, server: uk1-4.sstr-api.xyz, port: 443, type: trojan, password: MhPG7g9x2Etb4Hspsb, sni: uk1-4.sstr-api.xyz, skip-cert-verify: true, udp: true}
+  - {name: Relay_🇳🇱NL-🏁ZZ_652, server: uk1-3.sstr-api.xyz, port: 443, type: trojan, password: MhPG7g9x2Etb4Hspsb, sni: uk1-3.sstr-api.xyz, skip-cert-verify: true, udp: true}
+  - {name: Relay_🇳🇱NL-🏁ZZ_655, server: uk1-2.sstr-api.xyz, port: 443, type: trojan, password: MhPG7g9x2Etb4Hspsb, sni: uk1-2.sstr-api.xyz, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - V2-台湾06 大带宽 中继D 2x_39
-      - V2-台湾06 大带宽 中继D 2x_100
-      - 欧洲(欢迎订阅Youtube破解资源君)
-      - V2-台湾06 大带宽 中继C 2x_38
-      - V2-台湾06 大带宽 中继B 2x_37
-      - _US_美国
-      - _US_美国 2
-      - _US_美国 3
+      - Relay_🇪🇪EE-🇯🇵JP_345
+      - Relay_🇳🇱NL-🏁ZZ_653
+      - Relay_🇳🇱NL-🏁ZZ_647
+      - Relay_🇳🇱NL-🏁ZZ_652
+      - Relay_🇳🇱NL-🏁ZZ_655
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - V2-台湾06 大带宽 中继D 2x_39
-      - V2-台湾06 大带宽 中继D 2x_100
-      - 欧洲(欢迎订阅Youtube破解资源君)
-      - V2-台湾06 大带宽 中继C 2x_38
-      - V2-台湾06 大带宽 中继B 2x_37
-      - _US_美国
-      - _US_美国 2
-      - _US_美国 3
+      - Relay_🇪🇪EE-🇯🇵JP_345
+      - Relay_🇳🇱NL-🏁ZZ_653
+      - Relay_🇳🇱NL-🏁ZZ_647
+      - Relay_🇳🇱NL-🏁ZZ_652
+      - Relay_🇳🇱NL-🏁ZZ_655
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - V2-台湾06 大带宽 中继D 2x_39
-      - V2-台湾06 大带宽 中继D 2x_100
-      - 欧洲(欢迎订阅Youtube破解资源君)
-      - V2-台湾06 大带宽 中继C 2x_38
-      - V2-台湾06 大带宽 中继B 2x_37
-      - _US_美国
-      - _US_美国 2
-      - _US_美国 3
+      - Relay_🇪🇪EE-🇯🇵JP_345
+      - Relay_🇳🇱NL-🏁ZZ_653
+      - Relay_🇳🇱NL-🏁ZZ_647
+      - Relay_🇳🇱NL-🏁ZZ_652
+      - Relay_🇳🇱NL-🏁ZZ_655
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -72,63 +60,47 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - V2-台湾06 大带宽 中继D 2x_39
-      - V2-台湾06 大带宽 中继D 2x_100
-      - 欧洲(欢迎订阅Youtube破解资源君)
-      - V2-台湾06 大带宽 中继C 2x_38
-      - V2-台湾06 大带宽 中继B 2x_37
-      - _US_美国
-      - _US_美国 2
-      - _US_美国 3
+      - Relay_🇪🇪EE-🇯🇵JP_345
+      - Relay_🇳🇱NL-🏁ZZ_653
+      - Relay_🇳🇱NL-🏁ZZ_647
+      - Relay_🇳🇱NL-🏁ZZ_652
+      - Relay_🇳🇱NL-🏁ZZ_655
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - V2-台湾06 大带宽 中继D 2x_39
-      - V2-台湾06 大带宽 中继D 2x_100
-      - V2-台湾06 大带宽 中继C 2x_38
-      - V2-台湾06 大带宽 中继B 2x_37
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - V2-台湾06 大带宽 中继D 2x_39
-      - V2-台湾06 大带宽 中继D 2x_100
-      - 欧洲(欢迎订阅Youtube破解资源君)
-      - V2-台湾06 大带宽 中继C 2x_38
-      - V2-台湾06 大带宽 中继B 2x_37
-      - _US_美国
-      - _US_美国 2
-      - _US_美国 3
+      - Relay_🇪🇪EE-🇯🇵JP_345
+      - Relay_🇳🇱NL-🏁ZZ_653
+      - Relay_🇳🇱NL-🏁ZZ_647
+      - Relay_🇳🇱NL-🏁ZZ_652
+      - Relay_🇳🇱NL-🏁ZZ_655
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - V2-台湾06 大带宽 中继D 2x_39
-      - V2-台湾06 大带宽 中继D 2x_100
-      - 欧洲(欢迎订阅Youtube破解资源君)
-      - V2-台湾06 大带宽 中继C 2x_38
-      - V2-台湾06 大带宽 中继B 2x_37
-      - _US_美国
-      - _US_美国 2
-      - _US_美国 3
+      - Relay_🇪🇪EE-🇯🇵JP_345
+      - Relay_🇳🇱NL-🏁ZZ_653
+      - Relay_🇳🇱NL-🏁ZZ_647
+      - Relay_🇳🇱NL-🏁ZZ_652
+      - Relay_🇳🇱NL-🏁ZZ_655
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - V2-台湾06 大带宽 中继D 2x_39
-      - V2-台湾06 大带宽 中继D 2x_100
-      - 欧洲(欢迎订阅Youtube破解资源君)
-      - V2-台湾06 大带宽 中继C 2x_38
-      - V2-台湾06 大带宽 中继B 2x_37
-      - _US_美国
-      - _US_美国 2
-      - _US_美国 3
+      - Relay_🇪🇪EE-🇯🇵JP_345
+      - Relay_🇳🇱NL-🏁ZZ_653
+      - Relay_🇳🇱NL-🏁ZZ_647
+      - Relay_🇳🇱NL-🏁ZZ_652
+      - Relay_🇳🇱NL-🏁ZZ_655
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -144,14 +116,11 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - V2-台湾06 大带宽 中继D 2x_39
-      - V2-台湾06 大带宽 中继D 2x_100
-      - 欧洲(欢迎订阅Youtube破解资源君)
-      - V2-台湾06 大带宽 中继C 2x_38
-      - V2-台湾06 大带宽 中继B 2x_37
-      - _US_美国
-      - _US_美国 2
-      - _US_美国 3
+      - Relay_🇪🇪EE-🇯🇵JP_345
+      - Relay_🇳🇱NL-🏁ZZ_653
+      - Relay_🇳🇱NL-🏁ZZ_647
+      - Relay_🇳🇱NL-🏁ZZ_652
+      - Relay_🇳🇱NL-🏁ZZ_655
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
